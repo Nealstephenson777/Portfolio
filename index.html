@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="reset.css">
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/reset.css">
   </head>
   <body>
     <header class="mobile">
-      <nav>
-        <ul>
-          <li class="logo">NS</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contacts</li>
-        </ul>
-      </nav>
+        <nav class="topnav">
+          <a href="#home" class="active">NS</a>
+          <ul id="myLinks">
+            <li><a href="#news">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">Skills</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
     </header>
     <header class="desktop">
       <nav>
@@ -29,11 +44,11 @@
       </nav>
     </header>
     <main>
-      <section class="about">
-        <img src="" alt="">
-        <p>Hello&#44; My name is Neal. I am a Full&#8211;stack Trainee Developer at IT Career Switch. I possessed a strong background in mathematics and statistics&#44; as this was my field of study at Birkbrck University of London.<br> My passion for pursueing a career in coding was invoke when I started to integrate Python, and RStudio into my course modules at university.<br>To date&#44; I have completed 31&#37; of my full-stack career path. At this point in my journey&#44; I please to offer you the oppertunity to explore the projects that I have been working on since the start of my traineeship with IT Career Switch. This portfolio website is intended to provide a scope into the skills and knowledge I have gained since the start of my full-stack career path.</p>
-      </section>
-
+      <article class="about">
+        <img class=" secelm myphoto" src="./resorces/porty.png" alt="Neal Stephenson">
+        <h2 class="secelm">About</h2>
+        <p class="secelm mystory">Hello&#44; My name is Neal. I am a Full&#8211;stack Trainee Developer at IT Career Switch. I possessed a strong background in mathematics and statistics&#44; as this was my field of study at Birkbrck University of London. My passion for pursueing a career in coding was invoke when I started to integrate Python, and RStudio into my course modules at university. To date&#44; I have completed 31&#37; of my full&#8211;stack career path. At this point in my journey&#44; I please to offer you the oppertunity to explore the projects that I have been working on since the start of my traineeship with IT Career Switch. This portfolio website is intended to provide a scope into the skills and knowledge I have gained since the start of my full-stack career path.</p>
+      </article>
     </main>
     <aside class="">
 
