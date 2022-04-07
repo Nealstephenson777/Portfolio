@@ -14,47 +14,145 @@
         }
       }
     </script>
+    <script>
+
+      function iconFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      function iconFunctio() {
+        document.getElementById("myDropd").classList.toggle("show");
+      }
+      function iconFuncti() {
+        document.getElementById("myDrop").classList.toggle("show");
+      }
+
+      wwindow.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/styles.css">
     <link rel="stylesheet" href="./style/reset.css">
   </head>
   <body>
+   <div class="wrapper">
     <header class="mobile">
         <nav class="topnav">
-          <a href="#home" class="active">NS</a>
+          <a href="#Neal Stephenson" class="active">NS</a>
           <ul id="myLinks">
-            <li><a href="#news">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">Skills</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="#About Me">About Me</a></li>
+            <li><a href="#projects">Porjects</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Contact">Contacts</a></li>
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
         </nav>
     </header>
-    <header class="desktop">
-      <nav>
+    <header id="Neal Stephenson"class="desktop">
+      <nav class="topnav">
+        <a href="#Neal Stephenson" class="active me">Neal Stephenson</a>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contacts</li>
+          <li><a href="#About Me">About Me</a></li>
+          <li><a href="#projects">Porjects</a></li>
+          <li><a href="#Skills">Skills</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <article class="about">
-        <img class=" secelm myphoto" src="./resorces/porty.png" alt="Neal Stephenson">
-        <h2 class="secelm">About</h2>
-        <p class="secelm mystory">Hello&#44; My name is Neal. I am a Full&#8211;stack Trainee Developer at IT Career Switch. I possessed a strong background in mathematics and statistics&#44; as this was my field of study at Birkbrck University of London. My passion for pursueing a career in coding was invoke when I started to integrate Python, and RStudio into my course modules at university. To date&#44; I have completed 31&#37; of my full&#8211;stack career path. At this point in my journey&#44; I please to offer you the oppertunity to explore the projects that I have been working on since the start of my traineeship with IT Career Switch. This portfolio website is intended to provide a scope into the skills and knowledge I have gained since the start of my full-stack career path.</p>
-      </article>
-    </main>
-    <aside class="">
+      <section class="myphoto">
+        <img src="./resorces/porty.png" alt="Neal Stephenson">
+        <article id="contacts">
+          <h2>Neal Stephenson</h2>
+          <p>Full&#8211;stack Trainee Developer</p>
+          <p>Lets get connected!</p>
+          <ul class="socials">
+             <li><a href="https://github.com/Nealstephenson777"><i class="fa fa-github"></i></a></li>
+             <li><a href="https://twitter.com/@NealStephenso15"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="mailto:nealstephenson38@hotmail.co.uk"><i class="fa fa-envelope"></i></a></li>
+             <li><a href="https://www.linkedin.com/in/neal-stephenson-b80610141"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
+        </article>
+      </section>
+      <section id="About Me"  class="mystory about secelm" >
+        <h2 class="centerr">About Me</h2>
+        <p>Hello&#44; my name is Neal. I am a Full&#8211;stack Trainee Developer. I possessed a strong background in mathematics and statistics&#44; as this was my field of study at Birkbrck University of London. My passion for pursueing a career in coding was invoke when I started to integrate Python into my course modules at university. To date&#44; I have completed 31&#37; of my full&#8211;stack career path. At this point in my journey&#44; I please to offer you the oppertunity to explore the projects I have been doing since the start of my traineeship.</p>
+       </section>
+      </section>
+      <section class="logo">
+        <h2 id="projects" class="centerr">Projects</h2>
+        <section class="dropdowns">
 
-    </aside>
-    <footer>
-
+          <section class="dropdown">
+            <button onclick="iconFunction()"
+            class="dropbtn"><section class="icons8-html-5"></section></button>
+            <section id="myDropdown" class="dropdown-content">
+              <a href="https://nealstephenson777.github.io/Stories/">Forms</a>
+              <a href="https://nealstephenson777.github.io/Excursion/">Semantic</a>
+              <a href="https://nealstephenson777.github.io/Teacozy/">Non-semantic</a>
+            </section>
+            <h5 class="labels">Html</h5>
+          </section>
+          <section class="dropdown">
+            <button onclick="iconFunctio()"  class="dropbtn"><section class="icons8-css3"></section></button>
+            <section id="myDropd" class="dropdown-content">
+              <a href="https://nealstephenson777.github.io/Famtomatic/">CSS Flexbox</a>
+              <a href="https://nealstephenson777.github.io/Quickstep/">CSS Grid</a>
+            </section>
+            <h5 class="labels">Css3</h5>
+          </section>
+          <section class="dropdown">
+            <button onclick="iconFuncti()"  class="dropbtn"><section class="icons8-javascript"></section></button>
+            <section id="myDrop" class="dropdown-content">
+              <a href="https://nealstephenson777.github.io/Reasons-for-star-signs">Mixed messages</a>
+              <a href=https://nealstephenson777.github.io/Credit-Card-Checker/>Credit card</a>
+              <a href="#contact">Mystery organism</a>
+            </section>
+                <h5 class="labels">Javascript</h5>
+          </section>
+        </section>
+      </section>
+      <section id="Skills" class="skills">
+        <h2>Skills</h2>
+        <section class='skill'>
+          <i class="fab fa-git"><h5 class="labels">Git</h5></i>
+          <i class="fab fa-chrome"><h5 class="labels">Chrome</h5></i>
+          <i class="fas fa-terminal"><h5 class="labels">Command line</h5></i>
+          <i class="fab fa-npm" ><h5 class="labels">Node management</h5></i>
+          <i class="fab fa-node" ><h5 class="labels">Node.js</h5></i>
+          <i class="fas fa-atom" ><h5 class="labels">Atom</h5></i>
+        <section>
+      </section>
+    <footer >
+      <section id="opnav">
+        <h4>Neal Stephenson</h4>
+        <p class="intention">The intention of this portfolio website is to provide a scope into the skills and knowledge I have gained since on a full-stack engineering career path.</p>
+       <section class="footer-bottom">
+         <section class="footer-copy">
+           <em><p class="ital"><strong>copyright&copy;2022</strong> <a href="#">nealstephenson</a></p></em>
+         </section>
+         <section class="footer-menu">
+           <ul class="f-menu">
+             <li><a href="#Neal Stephenson">Home</a></li>
+             <li><a href="#projects">Porjects</a></li>
+             <li><a href="#skills">Skills</a></li>
+             <li><a href="#contacts">Contacts</a></li>
+           </ul>
+         </section>
+       </section>
+      </section>
     </footer>
+  </div>
   </body>
 </html>
