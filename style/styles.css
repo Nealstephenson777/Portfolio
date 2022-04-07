@@ -148,7 +148,7 @@ img {
 }
 
 .about p {
-  min-width: 50%;
+  max-width: 60.35rem;
   text-align: center;
 }
 
